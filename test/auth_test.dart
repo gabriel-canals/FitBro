@@ -9,6 +9,7 @@ void main() {
   group("Mock Authentication", () {
     final provider = MockAuthProvider();
 
+    /// Tests the isInitialized work.
     test('Should not be initialized to begin with', () {
       expect(
         provider.isInitialized,
@@ -16,6 +17,7 @@ void main() {
       );
     });
 
+    /// Tests whether the user can log out with the service uninitialized.
     test('Not log out if not initialized', () {
       expect(
         provider.logOut(),
@@ -25,6 +27,7 @@ void main() {
       );
     });
 
+    /// Tests the initialize function.
     test('Should be able to be initialized', () async {
       await provider.initialize();
       expect(
@@ -33,6 +36,7 @@ void main() {
       );
     });
 
+    /// Tests whether the user var gets some value after initialization.
     test('User should be null after initialization', () {
       expect(
         provider.currentUser,
@@ -40,6 +44,7 @@ void main() {
       );
     });
 
+    /// Tests the timeout for the service initialization.
     test(
       'Should be able to initialize in less than 2 seconds',
       () async {
@@ -52,6 +57,7 @@ void main() {
       timeout: const Timeout(Duration(seconds: 2)),
     );
 
+    /// Tests the createUser and the logIn functions.
     test('Create User should delegate to logIn function', () async {
       final badEmail = provider.createUser(
         email: 'foo@bar.com',
@@ -79,13 +85,15 @@ void main() {
       expect(validUser.isEmailVerified, false);
     });
 
-    test('Loggged user should be able to get verified', () async {
+    /// Tests the sendEmailVerification function.
+    test('Logged user should be able to get verified', () async {
       provider.sendEmailVerification();
       final user = provider.currentUser;
       expect(user, isNotNull);
       expect(user!.isEmailVerified, true);
     });
 
+    /// Tests the logOut and the logIn functions.
     test('Should be able to log out and log in again', () async {
       await provider.logOut();
       await provider.logIn(
@@ -98,8 +106,10 @@ void main() {
   });
 }
 
+/// In case the service is not initialized.
 class NotInitializedException implements Exception {}
 
+/// Overrides the AuthProvider class for testing purposes.
 class MockAuthProvider implements AuthProvider {
   AuthUser? _user;
   var _isInitialized = false;
