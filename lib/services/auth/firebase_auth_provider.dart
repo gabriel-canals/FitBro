@@ -6,7 +6,7 @@ import 'package:fitbro/services/auth/auth_exceptions.dart';
 
 import 'package:fitbro/firebase_options.dart';
 
-/// Firebase Authorization Provider. Adds abstraction to the AuthService
+/// Firebase Authentication Provider. Adds abstraction to the AuthService
 /// to separate back from front.
 class FirebaseAuthProvider implements AuthProvider {
   /// New user creation. Requires [email] and [password].

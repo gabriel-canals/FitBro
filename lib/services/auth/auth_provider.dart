@@ -2,7 +2,7 @@ import 'package:fitbro/services/auth/auth_user.dart';
 
 /// Represents an AuthProvider for an AuthService.
 /// 
-/// FitBro uses Firebase as Authorization Service.
+/// FitBro uses Firebase as Authentication Service.
 abstract class AuthProvider {
   /// The current user accessing the app.
   /// 

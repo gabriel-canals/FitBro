@@ -2,7 +2,7 @@ import 'package:fitbro/services/auth/firebase_auth_provider.dart';
 import 'package:fitbro/services/auth/auth_provider.dart';
 import 'package:fitbro/services/auth/auth_user.dart';
 
-/// FitBro's Authorization Service.
+/// FitBro's Authenticantion Service.
 ///
 /// Uses Firebase as provider, connected via the AuthProvider class.
 class AuthService implements AuthProvider {
@@ -47,7 +47,7 @@ class AuthService implements AuthProvider {
   @override
   Future<void> sendEmailVerification() => provider.sendEmailVerification();
 
-  /// The provider initializes the Authorization Service.
+  /// The provider initializes the Authentication Service.
   @override
   Future<void> initialize() => provider.initialize();
 }
