@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fitbro/services/auth/auth_exceptions.dart';
 import 'package:fitbro/services/auth/auth_provider.dart';
@@ -173,5 +172,10 @@ class MockAuthProvider implements AuthProvider {
   Future<void> initialize() async {
     await Future.delayed(const Duration(seconds: 1));
     _isInitialized = true;
+  }
+  
+  @override
+  Future<void> sendPasswordReset({required String email}) {
+    throw UnimplementedError();
   }
 }
