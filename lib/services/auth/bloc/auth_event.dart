@@ -23,6 +23,17 @@ class LogInAuthEvent extends AuthEvent {
 }
 
 /// Event for registering users.
+class RegiterAuthEvent extends AuthEvent {
+  final String email;
+  final String password;
+
+  const RegiterAuthEvent(
+    this.email,
+    this.password,
+  );
+}
+
+/// Event for registering users.
 class CreateUserAuthEvent extends AuthEvent {
   final String email;
   final String password;
