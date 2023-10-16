@@ -1,6 +1,8 @@
 {
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
-  }
+  "@@locale": "en",
+  "@@author": "Gabriel Canals",
+  "@@last_modified": "16-10-2023",
+  "@@context": "FitBro App",
+  "ok" : "OK",
+  "generic_error" : "An error occurred."
 }

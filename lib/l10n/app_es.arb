@@ -1,3 +1,6 @@
 {
-    "helloWorld": "¡Hola Mundo!"
+    "@@locale": "es",
+    "ok" : "OK",
+    "generic_error" : "Ha ocurrido un error."
+
 }
