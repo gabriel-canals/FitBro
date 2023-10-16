@@ -23,11 +23,11 @@ class LogInAuthEvent extends AuthEvent {
 }
 
 /// Event for registering users.
-class RegiterAuthEvent extends AuthEvent {
+class RegisterAuthEvent extends AuthEvent {
   final String email;
   final String password;
 
-  const RegiterAuthEvent(
+  const RegisterAuthEvent(
     this.email,
     this.password,
   );

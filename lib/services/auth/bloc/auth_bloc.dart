@@ -105,6 +105,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(const LoggedOutAuthState(
         isLoading: false,
       ));
+
       /// Gets the current email and password.
       final email = event.email;
       final password = event.password;
@@ -114,6 +115,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           email: email,
           password: password,
         );
+
         /// Verify the email if necessary.
         if (!user.isEmailVerified) {
           emit(const LoggedOutAuthState(
@@ -131,6 +133,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             isLoading: false,
           ));
         }
+
         /// User logged in.
         emit(LoggedInAuthState(
           currentUser: user,
@@ -154,6 +157,24 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         ));
       } on Exception catch (e) {
         emit(LoggedOutAuthState(
+          isLoading: false,
+          exception: e,
+        ));
+      }
+    });
+
+    on<RegisterAuthEvent>((event, emit) async {
+      final email = event.email;
+      final password = event.password;
+      try {
+        await provider.createUser(
+          email: email,
+          password: password,
+        );
+        await provider.sendEmailVerification();
+        emit(const NeedsVerificationAuthState(isLoading: false));
+      } on Exception catch (e) {
+        emit(RegisteringAuthState(
           isLoading: false,
           exception: e,
         ));
