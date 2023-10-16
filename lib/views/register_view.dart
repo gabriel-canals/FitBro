@@ -43,7 +43,7 @@ class _RegisterViewState extends State<RegisterView> {
       listener: errorChecker,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(context.loc.ok /*register */),
+          title: Text(context.loc.register),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -51,7 +51,7 @@ class _RegisterViewState extends State<RegisterView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(context.loc.ok /*register_view_prompt*/),
+                Text(context.loc.register_view_prompt),
                 /// Text field to introduce the user's email address.
                 emailTextField(context),
                 /// Text field to introduce the user's password.
@@ -84,7 +84,7 @@ class _RegisterViewState extends State<RegisterView> {
               password,
             ));
       },
-      child: Text(context.loc.ok /*register */),
+      child: Text(context.loc.register),
     );
   }
 
@@ -112,7 +112,7 @@ class _RegisterViewState extends State<RegisterView> {
       autofocus: true,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
-        hintText: context.loc.ok /*email_text_field_placeholder */,
+        hintText: context.loc.email_text_field_placeholder,
       ),
     );
   }
@@ -125,7 +125,7 @@ class _RegisterViewState extends State<RegisterView> {
       enableSuggestions: false,
       autocorrect: false,
       decoration: InputDecoration(
-        hintText: context.loc.ok /*password_text_field_placeholder */,
+        hintText: context.loc.password_text_field_placeholder,
       ),
     );
   }

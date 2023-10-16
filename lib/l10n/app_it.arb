@@ -1,6 +1,13 @@
 {
   "@@locale": "it",
   "ok" : "OK",
-  "generic_error" : "C'è stato un errore."
+  
+  "@_ERROR_MESSAGES_" : {},
+  "generic_error" : "C'è stato un errore.",
 
+    "@_REGISTER_ERROR_MESSAGES_" : {},
+  "register_generic_error" : "Errore durante la registrazione. Per favore riprovare più tardi!",
+  "register_invalid_email_error" : "E-mail non valido. Per favore provalo con un'altra!",
+  "register_email_in_use_error" : "Questa e-mail è già in uso. Scegli un'altra email!",
+  "register_weak_password_error" : "This password is not secure enough. Please choose another password!"
 }

@@ -1,6 +1,16 @@
 {
-    "@@locale": "es",
-    "ok" : "OK",
-    "generic_error" : "Ha ocurrido un error."
+
+"@@locale": "es",
+
+"ok" : "OK",
+
+  "@_ERROR_MESSAGES_" : {},
+  "generic_error" : "An error occurred.",
+
+    "@_REGISTER_ERROR_MESSAGES_" : {},
+  "register_generic_error" : "El registro ha fallado. ¡Inténtalo de nuevo más tarde!",
+  "register_invalid_email_error" : "Dirección de correo electrónico inválida. ¡Prueba otra dirección!",
+  "register_email_in_use_error" : "Esta dirección ya se encuentra en uso. ¡Por favor, escoge otra dirección de correo electrónico!",
+  "register_weak_password_error" : "Questa password non è abbastanza sicura. Prova un'altra password!"
 
 }
