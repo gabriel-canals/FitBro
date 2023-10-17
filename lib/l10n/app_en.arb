@@ -5,6 +5,7 @@
   "@@context": "FitBro App",
 
   "ok" : "OK",
+  "waiting" : "Wait for a moment...",
   "password_text_field_placeholder" :  "password",
   "email_text_field_placeholder" : "email",
   
