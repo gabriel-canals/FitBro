@@ -1,0 +1,1 @@
+const overviewPageRoute = '/fitbro/overview/';

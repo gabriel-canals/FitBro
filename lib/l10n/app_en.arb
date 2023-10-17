@@ -5,6 +5,7 @@
   "@@context": "FitBro App",
 
   "ok" : "OK",
+  "restart" : "Restart",
   "waiting" : "Wait for a moment...",
   "password_text_field_placeholder" :  "password",
   "email_text_field_placeholder" : "email",
@@ -18,8 +19,21 @@
   "register_email_in_use_error" : "This email is already in use. Please choose another email!",
   "register_weak_password_error" : "This password is not secure enough. Please choose another password!",
 
+    "@_LOGIN_ERROR_MESSAGES_" : {},
+  "login_generic_error" : "Failed to log in. Please try again later!",
+  "login_wrong_password_error" : "Wrong password. Please try again.",
+  "login_user_not_found_error" : "User not found. Please try again.",
+
   "@_REGISTER_VIEW_" : {},
   "register" : "Register",
-  "register_view_prompt" : "Please provide email and password to create an account."
+  "register_view_prompt" : "Please provide email and password to create an account.",
 
+  "@_LOGIN_VIEW_" : {},
+  "login" : "Sign in",
+  "login_view_prompt" : "Insert your email and password to access your account",
+
+  "@_VERIFY_EMAIL_VIEW_" : {},
+  "verify_email" : "Email Verification",
+  "verify_email_send_email_verification" : "We've sent you an email verification. Please follow the instructions to verify your account. If you haven't received a verification email yet, press the button below!",
+  "verify_email_prompt" : "Send email verification"
 }

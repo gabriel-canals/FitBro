@@ -1,7 +1,8 @@
 {
   "@@locale": "it",
-
+  
   "ok" : "OK",
+  "restart" : "Ricomincia",
   "waiting" : "Aspetta un momento...",
   "password_text_field_placeholder" :  "password",
   "email_text_field_placeholder" : "e-mail",
@@ -15,7 +16,22 @@
   "register_email_in_use_error" : "Questa e-mail è già in uso. Scegli un'altra email!",
   "register_weak_password_error" : "This password is not secure enough. Please choose another password!",
 
+    "@_LOGIN_ERROR_MESSAGES_" : {},
+  "login_generic_error" : "Errore di login. Per favore riprova più tardi!",
+  "login_wrong_password_error" : "Password errata. Per favore riprova.",
+  "login_user_not_found_error" : "Utente non trovato. Per favore riprova.",
+
   "@_REGISTER_VIEW_" : {},
   "register" : "Creare un Account",
-  "register_view_prompt" : "Per favore, fornisce un'e-mail e una password per creare il tuo account."
+  "register_view_prompt" : "Per favore, fornisce un'e-mail e una password per creare il tuo account.",
+  
+  "@_LOGIN_VIEW_" : {},
+  "login" : "Login",
+  "login_view_prompt" : "Inserisci la tua email e la password per accedere al tuo account.",
+
+  "@_VERIFY_EMAIL_VIEW_" : {},
+  "verify_email" : "Verifica Email",
+  "verify_email_send_email_verification" : "Ti inviamo un'e-mail di verifica. Seguire le loro istruzioni per verifica il tuo account. Se non hai ancora ricevuto l'e-mail di verifica, ¡premi il pulsante qui sotto!",
+  "verify_email_prompt" : "Invia email di verifica"
+
 }
