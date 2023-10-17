@@ -4,6 +4,8 @@
   "@@last_modified": "16-10-2023",
   "@@context": "FitBro App",
 
+  "@_GENERIC_" : {},
+
   "ok" : "OK",
   "restart" : "Restart",
   "waiting" : "Wait for a moment...",
@@ -24,6 +26,9 @@
   "login_wrong_password_error" : "Wrong password. Please try again.",
   "login_user_not_found_error" : "User not found. Please try again.",
 
+    "@_FORGOT_PASSWORD_ERROR_MESSAGES_" : {},
+    "forgot_password_view_generic_error": "We could not process your request. Please make sure that you are a registered user. If not, register a user now by going back one step.",
+
   "@_REGISTER_VIEW_" : {},
   "register" : "Register",
   "register_view_prompt" : "Please provide email and password to create an account.",
@@ -35,5 +40,15 @@
   "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Email Verification",
   "verify_email_send_email_verification" : "We've sent you an email verification. Please follow the instructions to verify your account. If you haven't received a verification email yet, press the button below!",
-  "verify_email_prompt" : "Send email verification"
+  "verify_email_prompt" : "Send email verification",
+  
+  "@_PASSWORD_FORGOT_AND_RESET_" : {},
+  "password_reset" : "Password Reset",
+  "password_reset_dialog_prompt": "We have now sent you a password reset link. Please check your inbox for more information.",
+  
+  "forgot_password" : "Forgotten Password",
+  "forgot_password_back_to_login" : "Back to login page",
+  "forgot_password_send_me_reset" : "Send me a password reset link",
+  "forgot_password_view_prompt" : "If you forgot your password, simply enter your email and we will send you a password reset link."
+
 }

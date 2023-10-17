@@ -22,6 +22,9 @@
   "login_wrong_password_error" : "Contraseña incorrecta. Por favor, inténtalo de nuevo.",
   "login_user_not_found_error" : "Usuario no encontrado. Por favor, inténtalo de nuevo.",
 
+    "@_FORGOT_PASSWORD_ERROR_MESSAGES_" : {},
+  "forgot_password_view_generic_error": "No hemos podido procesar tu solicitud. Asegúrate de ser un usuario registrado. Si no lo eres, puedes registrar un usuario volviendo a la página de registro.",
+
   "@_REGISTER_VIEW_" : {},
   "register" : "Crear Cuenta",
   "register_view_prompt" : "Por favor, proporciona un correo electrónico y una contraseña para crear tu cuenta.",
@@ -33,5 +36,14 @@
   "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Verificación de correo electrónico",
   "verify_email_send_email_verification" : "Te hemos enviado un correo de verificación. Sigue sus instrucciones para verificar tu cuenta. Si aún no has recibido el correo de verificación, ¡pulsa el botón de debajo!",
-  "verify_email_prompt" : "Enviar correo de verificación"
+  "verify_email_prompt" : "Enviar correo de verificación",
+
+  "@_PASSWORD_FORGOT_AND_RESET_" : {},
+  "password_reset" : "Cambio de Contraseña",
+  "password_reset_dialog_prompt": "Te hemos enviado un enlace para cambiar tu contraseña. Comprueba tu bandeja de entrada para más información.",
+  
+  "forgot_password" : "Contraseña Olvidada",
+  "forgot_password_back_to_login" : "Volver a Inicio de Sesión",
+  "forgot_password_send_me_reset" : "Envíame un enlace de restauración de contraseña.",
+  "forgot_password_view_prompt" : "Si olvidaste tu contraseña, introduce tu correo electrónico y te enviaremos un enlace de restauración de contraseña."
 }
