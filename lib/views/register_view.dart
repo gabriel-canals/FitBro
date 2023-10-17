@@ -3,6 +3,7 @@ import 'package:fitbro/services/auth/bloc/auth_event.dart';
 import 'package:fitbro/services/auth/bloc/auth_state.dart';
 import 'package:fitbro/utilities/dialogs/error_dialog.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
+import 'package:fitbro/utilities/text_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -53,9 +54,9 @@ class _RegisterViewState extends State<RegisterView> {
               children: [
                 Text(context.loc.register_view_prompt),
                 /// Text field to introduce the user's email address.
-                emailTextField(context),
+                emailTextField(context, _email),
                 /// Text field to introduce the user's password.
-                passwordTextField(context),
+                passwordTextField(context, _password),
                 Center(
                   child: Column(
                     /// On click, this button will try to create a new user
@@ -101,32 +102,5 @@ class _RegisterViewState extends State<RegisterView> {
         await showErrorDialog(context, context.loc.register_generic_error);
       }
     }
-  }
-
-  /// The user will insert their email here.
-  TextField emailTextField(BuildContext context) {
-    return TextField(
-      controller: _email,
-      enableSuggestions: true,
-      autocorrect: false,
-      autofocus: true,
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        hintText: context.loc.email_text_field_placeholder,
-      ),
-    );
-  }
-
-  /// The user will insert their password here.
-  TextField passwordTextField(BuildContext context) {
-    return TextField(
-      controller: _password,
-      obscureText: true,
-      enableSuggestions: false,
-      autocorrect: false,
-      decoration: InputDecoration(
-        hintText: context.loc.password_text_field_placeholder,
-      ),
-    );
   }
 }
