@@ -39,7 +39,9 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
             _textEditingController.clear();
             await showPasswordResetSentDialog(context);
           }
-          if (state.exception != null) await showErrorDialog(context, context.loc.forgot_password_view_generic_error);
+          if (state.exception != null) {
+            await showErrorDialog(context, context.loc.forgot_password_view_generic_error);
+          }
         }
       },
       child: Scaffold(
@@ -56,7 +58,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                 TextButton(
                   onPressed: () {
                     final email = _textEditingController.text;
-                    context.read<AuthBloc>().add(ForgottenPasswordAuthEvent(email));
+                    context.read<AuthBloc>().add(ForgottenPasswordAuthEvent(email: email));
                   },
                   child: Text(context.loc.forgot_password_send_me_reset),
                 ),

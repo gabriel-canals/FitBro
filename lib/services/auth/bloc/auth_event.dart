@@ -47,9 +47,9 @@ class CreateUserAuthEvent extends AuthEvent {
 /// Event in case the user forgot their password.
 class ForgottenPasswordAuthEvent extends AuthEvent {
   final String? email;
-  const ForgottenPasswordAuthEvent(
+  const ForgottenPasswordAuthEvent({
     this.email,
-  );
+  });
 }
 
 /// Event in case the user wants to log out.
