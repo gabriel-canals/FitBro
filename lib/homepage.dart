@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
               return const ForgotPasswordView();
             } else if (state is NeedsVerificationAuthState) {
               return const VerifyEmailView();
-             } else {
+            } else {
               final text0 = StreamController<String>();
               text0.add(context.loc.waiting);
               Size size = MediaQuery.of(context).size;

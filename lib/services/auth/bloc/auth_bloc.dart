@@ -163,6 +163,17 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
     });
 
+    /// A user does not have an account yet.
+    on<ShouldRegisterAuthEvent>((event, emit) async {
+      emit(
+        const RegisteringAuthState(
+          exception: null,
+          isLoading: false,
+        ),
+      );
+    });
+
+    /// A user wants to register.
     on<RegisterAuthEvent>((event, emit) async {
       final email = event.email;
       final password = event.password;

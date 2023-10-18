@@ -51,6 +51,10 @@
   "forgot_password" : "Forgotten Password",
   "forgot_password_back_to_login" : "Back to login page",
   "forgot_password_send_me_reset" : "Send me a password reset link",
-  "forgot_password_view_prompt" : "If you forgot your password, simply enter your email and we will send you a password reset link."
+  "forgot_password_view_prompt" : "If you forgot your password, simply enter your email and we will send you a password reset link.",
+
+  "@_OVERVIEW_VIEW_" : {},
+  "overview" : "My FitBro"
+
 
 }

@@ -2,6 +2,7 @@ import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/homepage.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/firebase_auth_provider.dart';
+import 'package:fitbro/views/oveview_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -24,7 +25,7 @@ void main() {
         child: const HomePage(),
       ),
       routes: {
-        //overviewPageRoute: (context) => overviewView(),
+        overviewPageRoute: (context) => const OverviewView(),
       },
     ),
   );

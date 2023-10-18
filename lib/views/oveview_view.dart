@@ -1,3 +1,5 @@
+import 'package:fitbro/constants/routes.dart';
+import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:flutter/material.dart';
 
 class OverviewView extends StatefulWidget {
@@ -10,6 +12,17 @@ class OverviewView extends StatefulWidget {
 class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(context.loc.overview),
+        actions: [
+          IconButton(
+              onPressed: () async {
+               Navigator.of(context).pushNamed(configRoute);
+              },
+              icon: const Icon(Icons.settings)),
+        ],
+      ),
+    );
   }
 }

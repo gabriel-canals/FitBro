@@ -47,5 +47,8 @@
   "forgot_password" : "Contraseña Olvidada",
   "forgot_password_back_to_login" : "Volver a Inicio de Sesión",
   "forgot_password_send_me_reset" : "Envíame un enlace de restauración de contraseña.",
-  "forgot_password_view_prompt" : "Si olvidaste tu contraseña, introduce tu correo electrónico y te enviaremos un enlace de restauración de contraseña."
+  "forgot_password_view_prompt" : "Si olvidaste tu contraseña, introduce tu correo electrónico y te enviaremos un enlace de restauración de contraseña.",
+
+  "@_OVERVIEW_VIEW_" : {},
+  "overview" : "Mi FitBro"
 }

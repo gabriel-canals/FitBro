@@ -46,5 +46,8 @@
   "forgot_password" : "Password Dimenticata",
   "forgot_password_back_to_login" : "Torna alla Pagina di Accesso",
   "forgot_password_send_me_reset" : "Inviami un collegamento per la reimpostazione della password.",
-  "forgot_password_view_prompt" : "Se hai dimenticato la password, inserisci la tua email e ti invieremo un link per reimpostare la password."
+  "forgot_password_view_prompt" : "Se hai dimenticato la password, inserisci la tua email e ti invieremo un link per reimpostare la password.",
+
+  "@_OVERVIEW_VIEW_" : {},
+  "overview" : "Il Mio FitBro"
 }

@@ -1,1 +1,2 @@
-const overviewPageRoute = '/fitbro/overview/';
+const overviewPageRoute = '/overview/';
+const configRoute = '/config/';
