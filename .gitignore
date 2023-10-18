@@ -33,6 +33,7 @@ lib/firebase_options.dart
 .pub/
 /build/
 untranslated.arb
+templates
 
 # Symbolication related
 app.*.symbols

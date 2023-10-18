@@ -50,5 +50,16 @@
   "forgot_password_view_prompt" : "Se hai dimenticato la password, inserisci la tua email e ti invieremo un link per reimpostare la password.",
 
   "@_OVERVIEW_VIEW_" : {},
-  "overview" : "Il Mio FitBro"
+  "overview" : "Il Mio FitBro",
+
+  "@_SETTINGS_" : {},
+  "settings" : "Collocamento",
+  "monday" : "Lunedi",
+  "saturday" : "Sabato",
+  "sunday" : "Domenica",
+  "setting_week_first_day" : "Il primo giorno della settimana",
+  "setting_language" : "Lingua",
+  "setting_height_unit" : "Unità di altezza",
+  "setting_distance_unit" : "Unità di distanza",
+  "setting_weight_unit" : "Unità di peso"
 }

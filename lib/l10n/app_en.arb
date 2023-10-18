@@ -55,7 +55,17 @@
   "forgot_password_view_prompt" : "If you forgot your password, simply enter your email and we will send you a password reset link.",
 
   "@_OVERVIEW_VIEW_" : {},
-  "overview" : "My FitBro"
+  "overview" : "My FitBro",
 
+  "@_SETTINGS_" : {},
+  "settings" : "Settings",
+  "monday" : "Monday",
+  "saturday" : "Saturday",
+  "sunday" : "Sunday",
+  "setting_week_first_day" : "First day of the week",
+  "setting_language" : "Language",
+  "setting_height_unit" : "Height unit",
+  "setting_distance_unit" : "Distance unit",
+  "setting_weight_unit" : "Weight unit"
 
 }

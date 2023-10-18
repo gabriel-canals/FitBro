@@ -51,5 +51,16 @@
   "forgot_password_view_prompt" : "Si olvidaste tu contraseña, introduce tu correo electrónico y te enviaremos un enlace de restauración de contraseña.",
 
   "@_OVERVIEW_VIEW_" : {},
-  "overview" : "Mi FitBro"
+  "overview" : "Mi FitBro",
+
+  "@_SETTINGS_" : {},
+  "settings" : "Configuración",
+  "monday" : "Lunes",
+  "saturday" : "Sábado",
+  "sunday" : "Domingo",
+  "setting_week_first_day" : "Primer día de la semana",
+  "setting_language" : "Idioma",
+  "setting_height_unit" : "Unidad de altura",
+  "setting_distance_unit" : "Unidad de distancia",
+  "setting_weight_unit" : "Unidad de peso"
 }

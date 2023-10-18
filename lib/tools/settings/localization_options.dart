@@ -13,24 +13,24 @@ class LocSettings extends StatelessWidget {
     return Column(
       children: [
         Row(children: [
-           Text(context.loc.email_text_field_placeholder),
-          WeightToggleButtons(),
+           Text(context.loc.setting_weight_unit),
+          const WeightToggleButtons(),
         ]),
         Row(children: [
-           Text(context.loc.email_text_field_placeholder),
-          DistanceToggleButtons(),
+           Text(context.loc.setting_distance_unit),
+          const DistanceToggleButtons(),
         ]),
         Row(children: [
-           Text(context.loc.email_text_field_placeholder),
-          HeightToggleButtons(),
+           Text(context.loc.setting_height_unit),
+          const HeightToggleButtons(),
         ]),
         Row(children: [
-           Text(context.loc.email_text_field_placeholder),
-          LanguageToggleButtons(),
+           Text(context.loc.setting_language),
+          const LanguageToggleButtons(),
         ]),
         Row(children: [
-           Text(context.loc.email_text_field_placeholder),
-          FirstDayToggleButtons(),
+           Text(context.loc.setting_week_first_day),
+          const FirstDayToggleButtons(),
         ]),
       ],
     );
