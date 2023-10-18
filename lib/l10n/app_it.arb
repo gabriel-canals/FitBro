@@ -27,6 +27,7 @@
   "@_REGISTER_VIEW_" : {},
   "register" : "Creare un Account",
   "register_view_prompt" : "Per favore, fornisce un'e-mail e una password per creare il tuo account.",
+  "register_view_already_registered" : "Ho già un account.",
   
   "@_LOGIN_VIEW_" : {},
   "login" : "Login",

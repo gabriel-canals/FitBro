@@ -32,6 +32,7 @@
   "@_REGISTER_VIEW_" : {},
   "register" : "Register",
   "register_view_prompt" : "Please provide email and password to create an account.",
+  "register_view_already_registered" : "I already have an account.",
 
   "@_LOGIN_VIEW_" : {},
   "login" : "Sign in",
