@@ -1,7 +1,6 @@
 const kilo = 'kg';
 const pound = 'lb';
-const meter = 'm';
-const kilometer = 'km';
+const metric = 'm/km';
+const imperial = 'mi/ft';
 const centimeter = 'cm';
-const inch = '"';
-const feet = '\'';
+const inch = 'inch (")';
