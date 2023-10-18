@@ -32,6 +32,8 @@
   "@_LOGIN_VIEW_" : {},
   "login" : "Iniciar Sesión",
   "login_view_prompt" : "Introduce tu correo electrónico y tu contraseña para entrar en tu cuenta.",
+  "login_view_not_registered_yet" : "¿Todavía no estás registrado? ¡Crea tu cuenta aquí!",
+  "login_view_forgot_password" : "He olvidado mi contraseña.",
 
   "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Verificación de correo electrónico",

@@ -36,6 +36,8 @@
   "@_LOGIN_VIEW_" : {},
   "login" : "Sign in",
   "login_view_prompt" : "Insert your email and password to access your account",
+  "login_view_not_registered_yet" : "Yo don't have an account? Create one here!",
+  "login_view_forgot_password" : "I forgot my password.",
 
   "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Email Verification",

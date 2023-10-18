@@ -31,6 +31,8 @@
   "@_LOGIN_VIEW_" : {},
   "login" : "Login",
   "login_view_prompt" : "Inserisci la tua email e la password per accedere al tuo account.",
+  "login_view_not_registered_yet" : "Non sei ancora registrato? Crea il tuo account qui!",
+  "login_view_forgot_password" : "Ho dimenticato la mia password.",
 
   "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Verifica Email",

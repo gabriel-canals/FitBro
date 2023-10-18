@@ -60,7 +60,11 @@ class _LoginViewState extends State<LoginView> {
                     child: Column(
                       /// On click, this button will try to log the user in
                       /// with the given email and password.
-                      children: [loginButton(context)],
+                      children: [
+                        loginButton(context),
+                        notRegisteredButton(context),
+                        forgottenPasswordButton(context),
+                      ],
                     ),
                   )
                 ],
@@ -68,6 +72,30 @@ class _LoginViewState extends State<LoginView> {
             ),
           ),
         ));
+  }
+
+  /// In case the user has forgotten their passsword.
+  TextButton forgottenPasswordButton(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        context.read<AuthBloc>().add(
+              const ForgottenPasswordAuthEvent(),
+            );
+      },
+      child: Text(context.loc.login_view_forgot_password),
+    );
+  }
+
+  /// In case the user is not registered yet.
+  TextButton notRegisteredButton(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        context.read<AuthBloc>().add(
+              const ShouldRegisterAuthEvent(),
+            );
+      },
+      child: Text(context.loc.login_view_not_registered_yet),
+    );
   }
 
   /// Checks if there is an error in the current state and displays it.
@@ -96,7 +124,7 @@ class _LoginViewState extends State<LoginView> {
               password,
             ));
       },
-      child: Text(context.loc.register),
+      child: Text(context.loc.login),
     );
   }
 }
