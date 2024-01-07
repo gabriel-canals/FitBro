@@ -56,6 +56,8 @@
 
   "@_OVERVIEW_VIEW_" : {},
   "overview" : "My FitBro",
+  "training" : "Training",
+  "diet" : "Diet",
 
   "@_SETTINGS_" : {},
   "settings" : "Settings",

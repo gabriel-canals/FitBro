@@ -51,6 +51,8 @@
 
   "@_OVERVIEW_VIEW_" : {},
   "overview" : "Il Mio FitBro",
+  "training" : "Allenamento",
+  "diet" : "Dieta",
 
   "@_SETTINGS_" : {},
   "settings" : "Collocamento",
