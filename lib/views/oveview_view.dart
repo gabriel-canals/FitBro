@@ -1,9 +1,14 @@
-import 'dart:math';
+
+//applocalizations
+import 'package:flutter_gen/gen_l10n/app_localizations.dart' show AppLocalizations;
+
 
 import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/constants/routes.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:flutter/material.dart';
+
+late AppLocalizations loc;
 
 class OverviewView extends StatefulWidget {
   const OverviewView({super.key});
@@ -37,6 +42,7 @@ class NavigationBarApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    loc = context.loc;
     return MaterialApp(
       theme: ThemeData(useMaterial3: true),
       home: const MainNavBar(),
@@ -46,7 +52,6 @@ class NavigationBarApp extends StatelessWidget {
 
 class MainNavBar extends StatefulWidget {
   const MainNavBar({super.key});
-
   @override
   State<MainNavBar> createState() => _MainNavBarState();
 }
@@ -74,17 +79,16 @@ class _MainNavBarState extends State<MainNavBar> {
         },
         indicatorColor: mainColor,
         selectedIndex: currentPageIndex,
-        //!ERROR: Localizations are not supported for this class
         destinations: <Widget>[
-          const NavigationDestination(
-            selectedIcon: Icon(Icons.fitness_center),
-            icon: Icon(Icons.fitness_center_outlined),
-            label: 'Entrenamiento',
+           NavigationDestination(
+            selectedIcon: const Icon(Icons.fitness_center),
+            icon: const Icon(Icons.fitness_center_outlined),
+            label: loc.training,
           ),
            NavigationDestination(
             selectedIcon: const Icon(Icons.restaurant_outlined),
             icon: const Icon(Icons.restaurant),
-            label: "Alimenación",
+            label: loc.diet,
           ),
         ],
       ),

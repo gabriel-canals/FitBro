@@ -3,5 +3,5 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart' show AppLocalizatio
 
 /// Localization messages will be accessed by loc.
 extension Localization on BuildContext {
-  AppLocalizations get loc => AppLocalizations.of(this);
+  AppLocalizations get loc => AppLocalizations.of(this)!;
 }

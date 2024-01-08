@@ -1,4 +1,3 @@
-import 'package:fitbro/constants/physic_units.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:fitbro/tools/settings/settings.dart';
 import 'package:flutter/material.dart';

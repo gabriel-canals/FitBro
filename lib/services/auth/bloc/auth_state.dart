@@ -1,3 +1,5 @@
+// ignore_for_file: override_on_non_overriding_member
+
 import 'package:fitbro/services/auth/auth_user.dart';
 import 'package:flutter/foundation.dart' show immutable;
 
