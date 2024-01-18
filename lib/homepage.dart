@@ -10,7 +10,7 @@ import 'package:fitbro/views/auth/forgot_password_view.dart';
 import 'package:fitbro/views/auth/login_view.dart';
 import 'package:fitbro/views/auth/register_view.dart';
 import 'package:fitbro/views/auth/verify_email_view.dart';
-import 'package:fitbro/views/oveview_view.dart';
+import 'package:fitbro/views/initial_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
         return BlocBuilder<AuthBloc, AuthState>(
           builder: (context, state) {
             if (state is LoggedInAuthState) {
-              return const OverviewView();
+              return const InitialView();
             } else if (state is RegisteringAuthState) {
               return const RegisterView();
             } else if (state is LoggedOutAuthState) {

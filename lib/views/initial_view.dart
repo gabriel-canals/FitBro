@@ -1,22 +1,24 @@
 //applocalizations
+import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/utilities/main_navbar.dart';
 
 import 'package:fitbro/constants/routes.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:flutter/material.dart';
 
-class OverviewView extends StatefulWidget {
-  const OverviewView({super.key});
+class InitialView extends StatefulWidget {
+  const InitialView({super.key});
 
   @override
-  State<OverviewView> createState() => _OverviewViewState();
+  State<InitialView> createState() => _InitialViewState();
 }
 
-class _OverviewViewState extends State<OverviewView> {
+class _InitialViewState extends State<InitialView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: mainColor,
         title: Text(context.loc.overview),
         actions: [
           IconButton(
@@ -26,8 +28,7 @@ class _OverviewViewState extends State<OverviewView> {
               icon: const Icon(Icons.settings)),
         ],
       ),
-      body: const NavigationBarApp(),
+      body: NavigationBarApp(context: context),
     );
   }
 }
-
