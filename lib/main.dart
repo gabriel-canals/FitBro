@@ -1,3 +1,5 @@
+import 'package:fitbro/constants/colors.dart';
+import 'package:fitbro/extensions/buildcontext/navbar_settings.dart';
 import 'package:fitbro/homepage.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/firebase_auth_provider.dart';
@@ -21,6 +23,7 @@ void main() async {
       theme: ThemeData(
         useMaterial3: true,
         primarySwatch: preferences.getMainColor(),
+        navigationBarTheme: defaultNavBarSettings(),
       ),
       home: BlocProvider<AuthBloc>(
         create: (context) => AuthBloc(FirebaseAuthProvider()),

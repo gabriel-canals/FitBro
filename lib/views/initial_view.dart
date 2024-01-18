@@ -1,4 +1,3 @@
-//applocalizations
 import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/utilities/main_navbar.dart';
 

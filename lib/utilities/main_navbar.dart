@@ -1,9 +1,8 @@
 import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
+import 'package:fitbro/extensions/buildcontext/navbar_settings.dart';
 import 'package:fitbro/views/view_exports.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'
-    show AppLocalizations;
 
 class NavigationBarApp extends StatelessWidget {
   const NavigationBarApp(
@@ -24,7 +23,7 @@ class MainNavBar extends StatefulWidget {
 
 class _MainNavBarState extends State<MainNavBar> {
   int currentPageIndex = 1;
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +38,6 @@ class _MainNavBarState extends State<MainNavBar> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: NavigationBar(
-        indicatorShape: const CircleBorder(),
-        height: 55,
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
@@ -50,7 +47,10 @@ class _MainNavBarState extends State<MainNavBar> {
         selectedIndex: currentPageIndex,
         destinations: <Widget>[
           NavigationDestination(
-            selectedIcon: const Icon(Icons.fitness_center),
+            selectedIcon: const Icon(
+              Icons.fitness_center,
+              color: Colors.white,
+            ),
             icon: const Icon(Icons.fitness_center_outlined),
             label: context.loc.training,
           ),
