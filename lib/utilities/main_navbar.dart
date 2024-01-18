@@ -1,6 +1,5 @@
 import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
-import 'package:fitbro/extensions/buildcontext/navbar_settings.dart';
 import 'package:fitbro/views/view_exports.dart';
 import 'package:flutter/material.dart';
 

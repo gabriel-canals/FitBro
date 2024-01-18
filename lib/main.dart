@@ -1,4 +1,3 @@
-import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/navbar_settings.dart';
 import 'package:fitbro/homepage.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
