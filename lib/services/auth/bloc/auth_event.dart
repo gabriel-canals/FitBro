@@ -26,10 +26,12 @@ class LogInAuthEvent extends AuthEvent {
 class RegisterAuthEvent extends AuthEvent {
   final String email;
   final String password;
+  final String username;
 
   const RegisterAuthEvent(
     this.email,
     this.password,
+    this.username,
   );
 }
 
@@ -37,10 +39,12 @@ class RegisterAuthEvent extends AuthEvent {
 class CreateUserAuthEvent extends AuthEvent {
   final String email;
   final String password;
+  final String username;
 
   const CreateUserAuthEvent(
     this.email,
     this.password,
+    this.username,
   );
 }
 

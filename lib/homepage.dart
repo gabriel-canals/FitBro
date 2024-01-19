@@ -49,6 +49,9 @@ class HomePage extends StatelessWidget {
               text0.add(context.loc.waiting);
               Size size = MediaQuery.of(context).size;
               return Scaffold(
+                appBar: AppBar(
+                  backgroundColor: mainColor,
+                ),
                 backgroundColor: mainColor.withAlpha(95),
                 body: LoadingScreen().loadingOverlay(size, text0),
               );

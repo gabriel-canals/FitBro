@@ -61,6 +61,7 @@ void main() {
       final badEmail = provider.createUser(
         email: 'foo@bar.com',
         password: '1234567',
+        username: 'foo',
       );
       expect(
         badEmail,
@@ -70,6 +71,7 @@ void main() {
       final badPasswd = provider.createUser(
         email: 'gabriel@canals.com',
         password: 'canals',
+        username: 'gabriel',
       );
       expect(
         badPasswd,
@@ -79,6 +81,7 @@ void main() {
       final validUser = await provider.createUser(
         email: 'gabriel@canals.com',
         password: 'c4n41\$',
+        username: 'gabriel',
       );
       expect(provider.currentUser, validUser);
       expect(validUser.isEmailVerified, false);
@@ -118,6 +121,7 @@ class MockAuthProvider implements AuthProvider {
   Future<AuthUser> createUser({
     required String email,
     required String password,
+    required String username,
   }) async {
     if (!isInitialized) throw NotInitializedException();
     await Future.delayed(const Duration(seconds: 1));

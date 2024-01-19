@@ -21,6 +21,7 @@ abstract class AuthProvider {
   Future<AuthUser> createUser({
     required String email,
     required String password,
+    required String username,
   });
 
   /// The user want to get out of the service.

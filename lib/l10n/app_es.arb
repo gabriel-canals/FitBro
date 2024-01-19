@@ -7,6 +7,8 @@
 "waiting" : "Espera un momento...",
 "password_text_field_placeholder" :  "contraseña",
 "email_text_field_placeholder" : "correo electrónico",
+"username_text_field_placeholder" : "nombre de usuario",
+
 
   "@_ERROR_MESSAGES_" : {},
   "generic_error" : "Ha ocurrido un error.",

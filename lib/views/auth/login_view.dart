@@ -1,3 +1,4 @@
+import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:fitbro/services/auth/auth_exceptions.dart';
 import 'package:fitbro/services/auth/bloc/auth_event.dart';
@@ -42,6 +43,7 @@ class _LoginViewState extends State<LoginView> {
         listener: errorChecker,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: mainColor,
             title: Text(context.loc.login),
           ),
           body: Padding(

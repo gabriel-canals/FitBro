@@ -18,3 +18,9 @@ class GenericAuthException implements Exception {}
 
 /// The information should not appear if the user is not logged in
 class UserNotLoggedInAuthException implements Exception {}
+
+/// The username provided is already in use by another user
+class AlreadyInUseUsernameAuthException implements Exception {}
+
+/// The username provided is too short
+class UsernameTooShortAuthException implements Exception {}

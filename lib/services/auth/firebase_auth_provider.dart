@@ -19,6 +19,10 @@ class FirebaseAuthProvider implements AuthProvider {
 
     /// Password of the user.
     required String password,
+
+    /// Username of the user.
+    required String username,
+
   }) async {
     try {
       /// Firebase creates the user with the arguments provided.
@@ -29,7 +33,12 @@ class FirebaseAuthProvider implements AuthProvider {
 
       /// Get the user after creation.
       final user = currentUser;
+
+      /// Save username to Firebase.
+      await FirebaseAuth.instance.currentUser!.updateDisplayName(username);
+      
       if (user != null) {
+        /// print username
         return user;
       } else {
         throw UserNotLoggedInAuthException();
@@ -39,7 +48,7 @@ class FirebaseAuthProvider implements AuthProvider {
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-email') {
         throw InvalidEmailAuthException();
-      } else if (e.code == 'wead-password') {
+      } else if (e.code == 'weak-password') {
         throw WeakPasswordAuthException();
       } else if (e.code == 'email-already-in-use') {
         throw AlreadyInUseEmailAuthException();
