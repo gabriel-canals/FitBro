@@ -12,8 +12,8 @@ class HeightToggleButtons extends StatefulWidget {
 class _HeightToggleButtonsState extends State<HeightToggleButtons> {
   final List<bool> _selectedDistance = <bool>[true, false];
   List<Widget> distance = <Widget>[
-    const Text(centimeter),
-    const Text(inch),
+    const Text(centimeterUnit),
+    const Text(inchUnit),
   ];
 
   @override

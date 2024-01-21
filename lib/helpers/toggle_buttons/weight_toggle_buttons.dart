@@ -11,7 +11,7 @@ class WeightToggleButtons extends StatefulWidget {
 
 class _WeightToggleButtonsState extends State<WeightToggleButtons> {
   final List<bool> _selectedweight = <bool>[true, false];
-  List<Widget> weight = <Widget>[const Text(kilo), const Text(pound)];
+  List<Widget> weight = <Widget>[const Text(kiloUnit), const Text(poundUnit)];
 
   @override
   Widget build(BuildContext context) {

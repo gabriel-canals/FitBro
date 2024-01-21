@@ -12,8 +12,8 @@ class DistanceToggleButtons extends StatefulWidget {
 class _DistanceToggleButtonsState extends State<DistanceToggleButtons> {
   final List<bool> _selectedDistance = <bool>[true, false];
   List<Widget> distance = <Widget>[
-    const Text(metric),
-    const Text(imperial),
+    const Text(metricUnit),
+    const Text(imperialUnit),
   ];
 
   @override
