@@ -1,4 +1,5 @@
 import 'package:fitbro/constants/colors.dart';
+import 'package:fitbro/constants/physic_units.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -28,27 +29,27 @@ class Settings {
     _preferences.setBool('Weight', imperial);
   }
 
-  getWeightSystem() async {
-    bool? stringValue = _preferences.getBool('Weight');
-    return stringValue ?? false;
+  Future<String> getWeightSystem() async {
+    bool? pound = _preferences.getBool('Weight');
+    return pound == true ? poundUnit : kiloUnit;
   }
 
   setDistanceSystem({required bool imperial}) async {
     _preferences.setBool('Distance', imperial);
   }
 
-  getDistanceSystem() async {
-    bool? stringValue = _preferences.getBool('Distance');
-    return stringValue ?? false;
+  Future<String> getDistanceSystem() async {
+    bool? imperial = _preferences.getBool('Distance');
+    return imperial == true ? imperialUnit : metricUnit;
   }
 
   setHeightSystem({required bool imperial}) async {
     _preferences.setBool('Height', imperial);
   }
 
-  getHeightSystem() async {
-    bool? stringValue = _preferences.getBool('Height');
-    return stringValue ?? false;
+  Future<String> getHeightSystem() async {
+    bool? inch = _preferences.getBool('Height');
+    return inch == true ? imperialUnit : metricUnit;
   }
 
   setLanguage({required int lang}) async {

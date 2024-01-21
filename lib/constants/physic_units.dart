@@ -1,6 +1,6 @@
-const kilo = 'kg';
-const pound = 'lb';
-const metric = 'm/km';
-const imperial = 'mi/ft';
-const centimeter = 'cm';
-const inch = 'inch (")';
+const kiloUnit = 'kg';
+const poundUnit = 'lb';
+const metricUnit = 'm/km';
+const imperialUnit = 'mi/ft';
+const centimeterUnit = 'cm';
+const inchUnit = 'inch (")';
