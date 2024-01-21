@@ -44,7 +44,6 @@ class _RegisterViewState extends State<RegisterView> {
     return BlocListener<AuthBloc, AuthState>(
       /// Check error in current state.
       listener: (context, state) async {
-        /// Checks if there is an error in the current state and displays it.
         if (state is RegisteringAuthState) {
           if (state.exception is WeakPasswordAuthException) {
             await showErrorDialog(
@@ -55,6 +54,9 @@ class _RegisterViewState extends State<RegisterView> {
           } else if (state.exception is InvalidEmailAuthException) {
             await showErrorDialog(
                 context, context.loc.register_invalid_email_error);
+          } else if (state.exception is UsernameTooShortAuthException) {
+            await showErrorDialog(
+                context, context.loc.register_username_too_short_error);
           } else if (state.exception is GenericAuthException) {
             await showErrorDialog(context, context.loc.register_generic_error);
           }

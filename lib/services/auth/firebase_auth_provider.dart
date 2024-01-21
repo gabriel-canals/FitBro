@@ -25,6 +25,11 @@ class FirebaseAuthProvider implements AuthProvider {
 
   }) async {
     try {
+      
+      if (username.isEmpty || username.length < 4) {
+        throw UsernameTooShortAuthException();
+      }
+
       /// Firebase creates the user with the arguments provided.
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
@@ -43,7 +48,6 @@ class FirebaseAuthProvider implements AuthProvider {
       } else {
         throw UserNotLoggedInAuthException();
       }
-
       /// In case any problem occurs, exceptions will be handled.
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-email') {
@@ -55,6 +59,8 @@ class FirebaseAuthProvider implements AuthProvider {
       } else {
         throw GenericAuthException();
       }
+    } on UsernameTooShortAuthException catch (_) {
+      throw UsernameTooShortAuthException();
     } catch (_) {
       throw GenericAuthException();
     }

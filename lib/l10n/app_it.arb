@@ -16,7 +16,8 @@
   "register_generic_error" : "Errore durante la registrazione. Per favore riprovare più tardi!",
   "register_invalid_email_error" : "E-mail non valido. Per favore provalo con un'altra!",
   "register_email_in_use_error" : "Questa e-mail è già in uso. Scegli un'altra email!",
-  "register_weak_password_error" : "This password is not secure enough. Please choose another password!",
+  "register_weak_password_error" : "Questa password non è abbastanza sicura. Prova un'altra password!",
+  "register_username_too_short_error": "Il nome utente deve essere di almeno 3 caratteri. Per favore provalo con un altro!",
 
     "@_LOGIN_ERROR_MESSAGES_" : {},
   "login_generic_error" : "Errore di login. Per favore riprova più tardi!",

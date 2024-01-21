@@ -21,6 +21,7 @@
   "register_invalid_email_error" : "Invalid email address. Please try another one!",
   "register_email_in_use_error" : "This email is already in use. Please choose another email!",
   "register_weak_password_error" : "This password is not secure enough. Please choose another password!",
+  "register_username_too_short_error": "Username must be at least 3 characters long. Please choose another username!",
 
     "@_LOGIN_ERROR_MESSAGES_" : {},
   "login_generic_error" : "Failed to log in. Please try again later!",

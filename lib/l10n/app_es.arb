@@ -17,8 +17,9 @@
   "register_generic_error" : "El registro ha fallado. ¡Inténtalo de nuevo más tarde!",
   "register_invalid_email_error" : "Dirección de correo electrónico inválida. ¡Prueba otra dirección!",
   "register_email_in_use_error" : "Esta dirección ya se encuentra en uso. ¡Por favor, escoge otra dirección de correo electrónico!",
-  "register_weak_password_error" : "Questa password non è abbastanza sicura. Prova un'altra password!",
-  
+  "register_weak_password_error" : "Esta contraseña no es lo bastante segura. Prueba con otra contraseña.",
+  "register_username_too_short_error": "El nombre de usuario debe tener al menos 3 caracteres. ¡Prueba con otro nombre de usuario!",
+
     "@_LOGIN_ERROR_MESSAGES_" : {},
   "login_generic_error" : "Error al iniciar sesión. ¡Inténtalo de nuevo más tarde!",
   "login_wrong_password_error" : "Contraseña incorrecta. Por favor, inténtalo de nuevo.",
