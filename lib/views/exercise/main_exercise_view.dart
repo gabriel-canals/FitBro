@@ -1,3 +1,4 @@
+import 'package:fitbro/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class ExerciseView extends StatelessWidget {
@@ -15,32 +16,125 @@ class ExerciseView extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
+        const SizedBox(height: 25),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
-              onPressed: null,
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.red),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 5,
+              width: MediaQuery.of(context).size.width / 2.5,
+              child: TextButton(
+                onPressed: null,
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0))),
+                  backgroundColor: MaterialStateProperty.all(mainColor),
+                ),
+                child: const Column(
+                  children: [
+                    Icon(Icons.abc),
+                    Text(
+                      "objetivos",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
-              child: const Text("data"),
             ),
-            const TextButton(onPressed: null, child: Text("data")),
+            const SizedBox(width: 25),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 5,
+              width: MediaQuery.of(context).size.width / 2.5,
+              child: TextButton(
+                onPressed: null,
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0))),
+                  backgroundColor: MaterialStateProperty.all(mainColor),
+                ),
+                child: const Column(
+                  children: [
+                    Icon(Icons.abc),
+                    Text(
+                      "objetivos",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
-        const Row(
+        const SizedBox(height: 25),
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(onPressed: null, child: Text("data")),
-            TextButton(onPressed: null, child: Text("data")),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 5,
+              width: MediaQuery.of(context).size.width / 2.5,
+              child: TextButton(
+                onPressed: null,
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0))),
+                  backgroundColor: MaterialStateProperty.all(mainColor),
+                ),
+                child: const Column(
+                  children: [
+                    Icon(Icons.abc),
+                    Text(
+                      "objetivos",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(width: 25),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 5,
+              width: MediaQuery.of(context).size.width / 2.5,
+              child: TextButton(
+                onPressed: null,
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0))),
+                  backgroundColor: MaterialStateProperty.all(mainColor),
+                ),
+                child: const Column(
+                  children: [
+                    Icon(Icons.abc),
+                    Text(
+                      "objetivos",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(onPressed: null, child: Text("data")),
-            TextButton(onPressed: null, child: Text("data")),
-          ],
+        const SizedBox(height: 25),
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 10,
+          width: (MediaQuery.of(context).size.width / 2.5 * 2 + 25),
+          child: TextButton(
+            onPressed: null,
+            style: ButtonStyle(
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0))),
+              backgroundColor: MaterialStateProperty.all(mainColor),
+            ),
+            child: const Column(
+              children: [
+                Icon(Icons.abc),
+                Text(
+                  "objetivos",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+          ),
         ),
       ],
     );
