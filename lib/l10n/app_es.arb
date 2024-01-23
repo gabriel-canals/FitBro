@@ -67,5 +67,12 @@
   "setting_language" : "Idioma",
   "setting_height_unit" : "Unidad de altura",
   "setting_distance_unit" : "Unidad de distancia",
-  "setting_weight_unit" : "Unidad de peso"
+  "setting_weight_unit" : "Unidad de peso",
+
+  "@_TRAINING_VIEW_" : {},
+  "training_history" : "Historial",
+  "training_templates" : "Plantillas",
+  "training_goals" : "Objetivos",
+  "exercises" : "Ejercicios",
+  "new_training" : "Nuevo Entrenamiento"
 }

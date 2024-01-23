@@ -66,5 +66,12 @@
   "setting_language" : "Lingua",
   "setting_height_unit" : "Unità di altezza",
   "setting_distance_unit" : "Unità di distanza",
-  "setting_weight_unit" : "Unità di peso"
+  "setting_weight_unit" : "Unità di peso",
+
+  "@_TRAINING_VIEW_" : {},
+  "training_history" : "Storia",
+  "training_templates" : "Modello",
+  "training_goals" : "Obiettivi",
+  "exercises" : "Esercizi",
+  "new_training" : "Nuovo Alenamento"
 }

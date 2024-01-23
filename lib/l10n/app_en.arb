@@ -70,6 +70,13 @@
   "setting_language" : "Language",
   "setting_height_unit" : "Height unit",
   "setting_distance_unit" : "Distance unit",
-  "setting_weight_unit" : "Weight unit"
+  "setting_weight_unit" : "Weight unit",
+
+  "@_TRAINING_VIEW_" : {},
+  "training_history" : "History",
+  "training_templates" : "Templates",
+  "training_goals" : "Goals",
+  "exercises" : "Exercises",
+  "new_training" : "New Training"
 
 }
