@@ -10,7 +10,7 @@
 "username_text_field_placeholder" : "nombre de usuario",
 
 
-  "@_ERROR_MESSAGES_" : {},
+    "@_ERROR_MESSAGES_" : {},
   "generic_error" : "Ha ocurrido un error.",
 
     "@_REGISTER_ERROR_MESSAGES_" : {},
@@ -28,23 +28,23 @@
     "@_FORGOT_PASSWORD_ERROR_MESSAGES_" : {},
   "forgot_password_view_generic_error": "No hemos podido procesar tu solicitud. Asegúrate de ser un usuario registrado. Si no lo eres, puedes registrar un usuario volviendo a la página de registro.",
 
-  "@_REGISTER_VIEW_" : {},
+    "@_REGISTER_VIEW_" : {},
   "register" : "Crear Cuenta",
   "register_view_prompt" : "Por favor, proporciona un correo electrónico y una contraseña para crear tu cuenta.",
   "register_view_already_registered" : "Ya tengo una cuenta.",
 
-  "@_LOGIN_VIEW_" : {},
+    "@_LOGIN_VIEW_" : {},
   "login" : "Iniciar Sesión",
   "login_view_prompt" : "Introduce tu correo electrónico y tu contraseña para entrar en tu cuenta.",
   "login_view_not_registered_yet" : "¿Todavía no estás registrado? ¡Crea tu cuenta aquí!",
   "login_view_forgot_password" : "He olvidado mi contraseña.",
 
-  "@_VERIFY_EMAIL_VIEW_" : {},
+    "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Verificación de correo electrónico",
   "verify_email_send_email_verification" : "Te hemos enviado un correo de verificación. Sigue sus instrucciones para verificar tu cuenta. Si aún no has recibido el correo de verificación, ¡pulsa el botón de debajo!",
   "verify_email_prompt" : "Enviar correo de verificación",
 
-  "@_PASSWORD_FORGOT_AND_RESET_" : {},
+    "@_PASSWORD_FORGOT_AND_RESET_" : {},
   "password_reset" : "Cambio de Contraseña",
   "password_reset_dialog_prompt": "Te hemos enviado un enlace para cambiar tu contraseña. Comprueba tu bandeja de entrada para más información.",
   
@@ -53,12 +53,12 @@
   "forgot_password_send_me_reset" : "Envíame un enlace de restauración de contraseña.",
   "forgot_password_view_prompt" : "Si olvidaste tu contraseña, introduce tu correo electrónico y te enviaremos un enlace de restauración de contraseña.",
 
-  "@_OVERVIEW_VIEW_" : {},
+    "@_OVERVIEW_VIEW_" : {},
   "overview" : "Mi FitBro",
   "training" : "Entrenamiento",
   "diet" : "Alimentación",
 
-  "@_SETTINGS_" : {},
+    "@_SETTINGS_" : {},
   "settings" : "Configuración",
   "monday" : "Lunes",
   "saturday" : "Sábado",
@@ -68,8 +68,12 @@
   "setting_height_unit" : "Unidad de altura",
   "setting_distance_unit" : "Unidad de distancia",
   "setting_weight_unit" : "Unidad de peso",
+  "logout" : "CERRAR SESIÓN",
+  "l10n_settings" : "Localización",
+  "profile_settings" : "Perfil",
+  "contact_support" : "Contacto y soporte",
 
-  "@_TRAINING_VIEW_" : {},
+    "@_TRAINING_VIEW_" : {},
   "training_history" : "Historial",
   "training_templates" : "Plantillas",
   "training_goals" : "Objetivos",

@@ -54,7 +54,7 @@ void main() async {
         child: const HomePage(),
       ),
       routes: {
-        configRoute: (context) => SettingsMenu(),
+        configRoute: (context) => const SettingsMenu(),
         historyRoute: (context) => const HistoryView(),
         templatesRoute: (context) => const TemplatesView(),
         goalsRoute: (context) => const GoalsView(),

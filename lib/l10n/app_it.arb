@@ -9,7 +9,7 @@
   "username_text_field_placeholder" : "nome utente",
 
 
-  "@_ERROR_MESSAGES_" : {},
+    "@_ERROR_MESSAGES_" : {},
   "generic_error" : "C'è stato un errore.",
 
     "@_REGISTER_ERROR_MESSAGES_" : {},
@@ -27,23 +27,23 @@
     "@_FORGOT_PASSWORD_ERROR_MESSAGES_" : {},
   "forgot_password_view_generic_error": "Non è stato possibile elaborare la tua richiesta. Assicurati di essere un utente registrato. In caso contrario, registra subito un utente tornando a Creare un Account.",
 
-  "@_REGISTER_VIEW_" : {},
+    "@_REGISTER_VIEW_" : {},
   "register" : "Creare un Account",
   "register_view_prompt" : "Per favore, fornisce un'e-mail e una password per creare il tuo account.",
   "register_view_already_registered" : "Ho già un account.",
   
-  "@_LOGIN_VIEW_" : {},
+    "@_LOGIN_VIEW_" : {},
   "login" : "Login",
   "login_view_prompt" : "Inserisci la tua email e la password per accedere al tuo account.",
   "login_view_not_registered_yet" : "Non sei ancora registrato? Crea il tuo account qui!",
   "login_view_forgot_password" : "Ho dimenticato la mia password.",
 
-  "@_VERIFY_EMAIL_VIEW_" : {},
+    "@_VERIFY_EMAIL_VIEW_" : {},
   "verify_email" : "Verifica Email",
   "verify_email_send_email_verification" : "Ti inviamo un'e-mail di verifica. Seguire le loro istruzioni per verifica il tuo account. Se non hai ancora ricevuto l'e-mail di verifica, ¡premi il pulsante qui sotto!",
   "verify_email_prompt" : "Invia email di verifica",
 
-  "@_PASSWORD_FORGOT_AND_RESET_" : {},
+    "@_PASSWORD_FORGOT_AND_RESET_" : {},
   "password_reset" : "Reimpostazione della Password",
   "password_reset_dialog_prompt": "Ti abbiamo inviato un link per reimpostare la sua password. Controlla la tua casella di posta per ulteriori informazioni.",
   
@@ -52,12 +52,12 @@
   "forgot_password_send_me_reset" : "Inviami un collegamento per la reimpostazione della password.",
   "forgot_password_view_prompt" : "Se hai dimenticato la password, inserisci la tua email e ti invieremo un link per reimpostare la password.",
 
-  "@_OVERVIEW_VIEW_" : {},
+    "@_OVERVIEW_VIEW_" : {},
   "overview" : "Il Mio FitBro",
   "training" : "Allenamento",
   "diet" : "Dieta",
 
-  "@_SETTINGS_" : {},
+    "@_SETTINGS_" : {},
   "settings" : "Collocamento",
   "monday" : "Lunedi",
   "saturday" : "Sabato",
@@ -67,8 +67,12 @@
   "setting_height_unit" : "Unità di altezza",
   "setting_distance_unit" : "Unità di distanza",
   "setting_weight_unit" : "Unità di peso",
+  "logout" : "DISCONNETTERSI",
+  "l10n_settings" : "Localizzazione",
+  "profile_settings" : "Profilo",
+  "contact_support" : "Contatto e supporto",
 
-  "@_TRAINING_VIEW_" : {},
+    "@_TRAINING_VIEW_" : {},
   "training_history" : "Storia",
   "training_templates" : "Modello",
   "training_goals" : "Obiettivi",
