@@ -42,12 +42,14 @@ class _MainNavBarState extends State<MainNavBar> {
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
           labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
-            (Set<MaterialState> states) => states
-                    .contains(MaterialState.selected)
-                ? TextStyle(color: secondaryColor, fontWeight: FontWeight.bold)
-                : const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+              (Set<MaterialState> states) =>
+                  states.contains(MaterialState.selected)
+                      ? TextStyle(
+                          color: secondaryColor, fontWeight: FontWeight.w900)
+                      : TextStyle(
+                          color: secondaryColor, fontWeight: FontWeight.w900)
+              //: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
         ),
         child: NavigationBar(
           onDestinationSelected: (int index) {
@@ -70,7 +72,10 @@ class _MainNavBarState extends State<MainNavBar> {
             ),
             const Column(),
             NavigationDestination(
-              selectedIcon: const Icon(Icons.restaurant_outlined),
+              selectedIcon: const Icon(
+                Icons.restaurant_outlined,
+                color: Colors.white,
+              ),
               icon: const Icon(Icons.restaurant),
               label: context.loc.diet,
             ),

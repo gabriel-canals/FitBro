@@ -1,4 +1,5 @@
 import 'package:fitbro/constants/colors.dart';
+import 'package:fitbro/constants/routes.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -76,7 +77,9 @@ class MainExerciseViewButton extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 6,
       width: MediaQuery.of(context).size.width / 3,
       child: TextButton(
-        onPressed: null,
+        onPressed: () {
+          Navigator.of(context).pushNamed(historyRoute);
+        },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(mainColor2),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(

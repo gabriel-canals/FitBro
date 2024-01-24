@@ -4,6 +4,9 @@ import 'package:fitbro/homepage.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/firebase_auth_provider.dart';
 import 'package:fitbro/tools/settings/settings.dart';
+import 'package:fitbro/views/exercise/goals_view.dart';
+import 'package:fitbro/views/exercise/history_view.dart';
+import 'package:fitbro/views/exercise/templates_view.dart';
 import 'package:fitbro/views/view_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,6 +55,10 @@ void main() async {
       ),
       routes: {
         configRoute: (context) => SettingsMenu(),
+        historyRoute: (context) => const HistoryView(),
+        templatesRoute: (context) => const TemplatesView(),
+        goalsRoute: (context) => const GoalsView(),
+        exercisesRoute: (context) => const ExerciseView()
       },
     ),
   );
