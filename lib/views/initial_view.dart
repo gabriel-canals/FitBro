@@ -1,4 +1,3 @@
-import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/utilities/main_navbar.dart';
 
 import 'package:fitbro/constants/routes.dart';
@@ -17,8 +16,13 @@ class _InitialViewState extends State<InitialView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: mainColor,
-        title: Text(context.loc.overview),
+        title: Align(
+          alignment: const FractionalOffset(0.05, 0),
+          child: Text(
+            context.loc.overview,
+            style: const TextStyle(fontSize: 40),
+          ),
+        ),
         actions: [
           IconButton(
               onPressed: () async {
