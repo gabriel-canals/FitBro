@@ -46,6 +46,7 @@ dependencies:
   country_flags: ^2.1.1
   google_sign_in: ^6.1.6
   cloud_firestore: ^4.14.0
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -99,15 +100,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
-  fonts:
-    - family: Proxima-Nova
-      fonts:
-        - asset: assets/fonts/proximanova_regular.ttf
-        - asset: assets/fonts/proximanova_bold.otf
-          weight: 400
-        - asset: assets/fonts/proximanova_boldit.otf
-          style: italic
-          weight: 400
-        - asset: assets/fonts/proximanova_extrabold.otf
-          weight: 800
