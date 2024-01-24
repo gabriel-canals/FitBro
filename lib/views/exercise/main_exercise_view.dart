@@ -10,23 +10,21 @@ class ExerciseView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(height: 60),
         Column(
           children: [
-            Align(
-              alignment: const FractionalOffset(0.3, 0.7),
-              heightFactor: 2,
-              child: Text(
-                context.loc.training,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontFamily: GoogleFonts.montserrat().fontFamily,
-                  color: ternaryColor,
-                  fontSize: 40,
-                  letterSpacing: 0,
-                  fontWeight: FontWeight.bold,
-                ),
+            Text(
+              context.loc.training,
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontFamily: GoogleFonts.montserrat().fontFamily,
+                color: ternaryColor,
+                fontSize: 40,
+                letterSpacing: 0,
+                fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -56,7 +54,7 @@ class ExerciseView extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 60),
             NewTrainingButton(label: context.loc.new_training),
           ],
         ),
@@ -75,8 +73,8 @@ class MainExerciseViewButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height / 4.5,
-      width: MediaQuery.of(context).size.width / 2.5,
+      height: MediaQuery.of(context).size.height / 6,
+      width: MediaQuery.of(context).size.width / 3,
       child: TextButton(
         onPressed: null,
         style: ButtonStyle(
@@ -90,7 +88,7 @@ class MainExerciseViewButton extends StatelessWidget {
           children: [
             Icon(
               icon,
-              size: 100,
+              size: 70,
               color: Colors.white,
             ),
             const SizedBox(height: 15),
@@ -119,12 +117,12 @@ class NewTrainingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height / 10,
-      width: (MediaQuery.of(context).size.width / 2.5 * 2 + 25),
+      height: MediaQuery.of(context).size.height / 12,
+      width: (MediaQuery.of(context).size.width / 3 * 2 + 25),
       child: TextButton(
         onPressed: null,
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(mainColor2),
+          backgroundColor: MaterialStateProperty.all(secondaryColor),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(18.0))),
         ),
@@ -136,14 +134,15 @@ class NewTrainingButton extends StatelessWidget {
               label,
               style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w700),
             ),
             const SizedBox(width: 10),
-            FloatingActionButton(
+            FloatingActionButton.small(
               onPressed: () {
                 // Add your onPressed code here!
               },
+              backgroundColor: mainColor2,
               child: const Icon(
                 Icons.add,
                 color: Colors.white,

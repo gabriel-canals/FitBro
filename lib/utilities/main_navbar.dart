@@ -33,33 +33,49 @@ class _MainNavBarState extends State<MainNavBar> {
             currentPageIndex = 1;
           });
         },
-        child: const Icon(Icons.person),
+        child: Icon(
+          Icons.person,
+          color: quaternaryColor,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: NavigationBar(
-        onDestinationSelected: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
-        },
-        indicatorColor: mainColor,
-        selectedIndex: currentPageIndex,
-        destinations: <Widget>[
-          NavigationDestination(
-            selectedIcon: const Icon(
-              Icons.fitness_center,
-              color: Colors.white,
+      bottomNavigationBar: NavigationBarTheme(
+        data: NavigationBarThemeData(
+          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
+            (Set<MaterialState> states) => states
+                    .contains(MaterialState.selected)
+                ? TextStyle(color: secondaryColor, fontWeight: FontWeight.bold)
+                : const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+        ),
+        child: NavigationBar(
+          onDestinationSelected: (int index) {
+            setState(() {
+              currentPageIndex = index;
+            });
+          },
+          backgroundColor: mainColor2,
+          indicatorColor: secondaryColor,
+          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+          selectedIndex: currentPageIndex,
+          destinations: <Widget>[
+            NavigationDestination(
+              selectedIcon: const Icon(
+                Icons.fitness_center,
+                color: Colors.white,
+              ),
+              icon: const Icon(Icons.fitness_center_outlined),
+              label: context.loc.training,
             ),
-            icon: const Icon(Icons.fitness_center_outlined),
-            label: context.loc.training,
-          ),
-          const Column(),
-          NavigationDestination(
-            selectedIcon: const Icon(Icons.restaurant_outlined),
-            icon: const Icon(Icons.restaurant),
-            label: context.loc.diet,
-          ),
-        ],
+            const Column(),
+            NavigationDestination(
+              selectedIcon: const Icon(Icons.restaurant_outlined),
+              icon: const Icon(Icons.restaurant),
+              label: context.loc.diet,
+            ),
+          ],
+        ),
       ),
       body: <Widget>[
         /// Exercise view

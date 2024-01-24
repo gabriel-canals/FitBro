@@ -8,6 +8,7 @@ import 'package:fitbro/views/view_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'constants/routes.dart';
 
@@ -21,6 +22,14 @@ void main() async {
       debugShowCheckedModeBanner: false,
       title: 'FitBro',
       theme: ThemeData(
+        textTheme: GoogleFonts.montserratTextTheme(),
+        fontFamily: GoogleFonts.montserrat().fontFamily,
+        appBarTheme: AppBarTheme(
+            backgroundColor: mainColor2,
+            titleTextStyle: TextStyle(
+              color: ternaryColor,
+              fontWeight: FontWeight.w600,
+            )),
         colorScheme: ColorScheme(
             brightness: Brightness.dark,
             primary: secondaryColor,
