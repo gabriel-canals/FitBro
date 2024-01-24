@@ -99,3 +99,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  fonts:
+    - family: Proxima-Nova
+      fonts:
+        - asset: assets/fonts/proximanova_regular.ttf
+        - asset: assets/fonts/proximanova_bold.otf
+          weight: 400
+        - asset: assets/fonts/proximanova_boldit.otf
+          style: italic
+          weight: 400
+        - asset: assets/fonts/proximanova_extrabold.otf
+          weight: 800
