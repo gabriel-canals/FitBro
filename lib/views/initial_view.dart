@@ -1,7 +1,9 @@
+import 'package:fitbro/constants/routes.dart';
+import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/utilities/main_navbar.dart';
 
-import 'package:fitbro/constants/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class InitialView extends StatefulWidget {
   const InitialView({super.key});
@@ -17,8 +19,9 @@ class _InitialViewState extends State<InitialView> {
       appBar: AppBar(
         actions: [
           IconButton(
-              onPressed: () async {
-                Navigator.of(context).pushNamed(configRoute);
+              onPressed: () {
+                Navigator.of(context).pushNamed(configRoute,
+                    arguments: context.read<AuthBloc>());
               },
               icon: const Icon(Icons.settings)),
         ],
