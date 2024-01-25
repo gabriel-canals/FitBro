@@ -75,6 +75,8 @@
   "profile_settings" : "Profile",
   "contact_support" : "Contact and support",
   "account_settings" : "Account",
+  "language_changed" : "Language changed",
+  "restart_app" : "Restart FitBro to apply changes.",
 
 
     "@_TRAINING_VIEW_" : {},

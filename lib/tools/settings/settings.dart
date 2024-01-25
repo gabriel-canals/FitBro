@@ -1,5 +1,6 @@
 import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/constants/physic_units.dart';
+import 'package:fitbro/main.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -52,13 +53,14 @@ class Settings {
     return inch == true ? imperialUnit : metricUnit;
   }
 
-  setLanguage({required int lang}) async {
-    _preferences.setInt('Language', lang);
+  setLanguage({required String lang}) async {
+    _preferences.setString('Language', lang);
+    MyMaterialApp(languageCode: lang);
   }
 
-  getLanguage() async {
-    int? intValue = _preferences.getInt('Language');
-    return intValue ?? 0;
+  getLanguage() {
+    String? strValue = _preferences.getString('Language');
+    return strValue ?? 'en';
   }
 
   setFirstDay({required int day}) async {

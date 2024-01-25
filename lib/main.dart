@@ -9,6 +9,7 @@ import 'package:fitbro/views/exercise/history_view.dart';
 import 'package:fitbro/views/exercise/templates_view.dart';
 import 'package:fitbro/views/view_exports.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,10 +19,30 @@ import 'constants/routes.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await preferences.settingsInit();
+  String lang = await preferences.getLanguage();
   runApp(
-    MaterialApp(
+    MyMaterialApp(languageCode: lang),
+  );
+}
+
+class MyMaterialApp extends StatelessWidget {
+  MyMaterialApp({
+    super.key,
+    this.languageCode = 'en',
+  });
+
+  String languageCode;
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return MaterialApp(
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
+      locale: Locale.fromSubtags(languageCode: languageCode),
       debugShowCheckedModeBanner: false,
       title: 'FitBro',
       theme: ThemeData(
@@ -60,6 +81,6 @@ void main() async {
         goalsRoute: (context) => const GoalsView(),
         exercisesRoute: (context) => const ExerciseView()
       },
-    ),
-  );
+    );
+  }
 }

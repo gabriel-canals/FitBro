@@ -73,6 +73,8 @@
   "profile_settings" : "Perfil",
   "contact_support" : "Contacto y soporte",
   "account_settings" : "Cuenta",
+  "language_changed" : "Idioma cambiado",
+  "restart_app" : "Reinicia FitBro para aplicar los cambios.",
 
     "@_TRAINING_VIEW_" : {},
   "training_history" : "Historial",

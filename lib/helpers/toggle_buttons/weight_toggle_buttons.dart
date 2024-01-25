@@ -1,3 +1,4 @@
+import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/constants/physic_units.dart';
 import 'package:fitbro/tools/settings/settings.dart';
 import 'package:flutter/material.dart';
@@ -26,13 +27,14 @@ class _WeightToggleButtonsState extends State<WeightToggleButtons> {
         });
       },
       borderRadius: const BorderRadius.all(Radius.circular(8)),
-      selectedBorderColor: Colors.red[700],
-      selectedColor: Colors.white,
-      fillColor: Colors.red[200],
-      color: Colors.red[400],
-      constraints: const BoxConstraints(
-        minHeight: 40.0,
-        minWidth: 80.0,
+      selectedBorderColor: quaternaryColor,
+      selectedColor: myBlackColor,
+      fillColor: ternaryColor,
+      color: myBlackColor,
+      textStyle: const TextStyle(fontWeight: FontWeight.w700),
+      constraints: BoxConstraints(
+        minHeight: MediaQuery.of(context).size.height / 20,
+        minWidth: MediaQuery.of(context).size.width / 10,
       ),
       isSelected: _selectedweight,
       children: weight,
