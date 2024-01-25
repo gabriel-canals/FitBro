@@ -1,4 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart' show FirebaseAuth, FirebaseAuthException;
+import 'package:firebase_auth/firebase_auth.dart'
+    show FirebaseAuth, FirebaseAuthException;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fitbro/services/auth/auth_provider.dart';
 import 'package:fitbro/services/auth/auth_user.dart';
@@ -22,10 +23,8 @@ class FirebaseAuthProvider implements AuthProvider {
 
     /// Username of the user.
     required String username,
-
   }) async {
     try {
-      
       if (username.isEmpty || username.length < 4) {
         throw UsernameTooShortAuthException();
       }
@@ -41,13 +40,14 @@ class FirebaseAuthProvider implements AuthProvider {
 
       /// Save username to Firebase.
       await FirebaseAuth.instance.currentUser!.updateDisplayName(username);
-      
+
       if (user != null) {
         /// print username
         return user;
       } else {
         throw UserNotLoggedInAuthException();
       }
+
       /// In case any problem occurs, exceptions will be handled.
     } on FirebaseAuthException catch (e) {
       if (e.code == 'invalid-email') {
@@ -138,7 +138,7 @@ class FirebaseAuthProvider implements AuthProvider {
       options: DefaultFirebaseOptions.currentPlatform,
     );
   }
-  
+
   /// Sends a password reset email if the user requested it.
   @override
   Future<void> sendPasswordReset({required String email}) async {
@@ -156,5 +156,10 @@ class FirebaseAuthProvider implements AuthProvider {
     } catch (_) {
       throw GenericAuthException();
     }
+  }
+
+  @override
+  Future<void> changeUsername({required String username}) async {
+    await FirebaseAuth.instance.currentUser!.updateDisplayName(username);
   }
 }

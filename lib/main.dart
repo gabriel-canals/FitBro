@@ -25,6 +25,7 @@ void main() async {
   );
 }
 
+// ignore: must_be_immutable
 class MyMaterialApp extends StatelessWidget {
   MyMaterialApp({
     super.key,

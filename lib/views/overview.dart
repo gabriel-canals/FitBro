@@ -4,9 +4,14 @@ import 'package:fitbro/services/auth/bloc/auth_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class OverviewView extends StatelessWidget {
+class OverviewView extends StatefulWidget {
   const OverviewView({super.key});
 
+  @override
+  State<OverviewView> createState() => _OverviewViewState();
+}
+
+class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
     return Column(

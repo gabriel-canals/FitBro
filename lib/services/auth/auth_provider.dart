@@ -37,4 +37,8 @@ abstract class AuthProvider {
   Future<void> sendPasswordReset({
     required String email,
   });
+
+  Future<void> changeUsername({
+    required String username,
+  });
 }

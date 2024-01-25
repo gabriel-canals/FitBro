@@ -21,7 +21,7 @@ class SettingsSection {
         );
       },
       isExpanded: isExpanded,
-      body: SizedBox(height: 250, width: double.infinity, child: settings),
+      body: SizedBox(height: 320, width: double.infinity, child: settings),
     );
   }
 

@@ -2,6 +2,7 @@ import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/bloc/auth_event.dart';
+import 'package:fitbro/tools/settings/account_settings.dart';
 import 'package:fitbro/tools/settings/localization_options.dart';
 import 'package:flutter/material.dart';
 import 'package:fitbro/tools/settings/settings_event.dart';
@@ -16,16 +17,12 @@ class SettingsMenu extends StatefulWidget {
 class _SettingsMenuState extends State<SettingsMenu> {
   late final sections = [
     SettingsSection(
-      title: context.loc.profile_settings,
-      settings: null,
-    ),
-    SettingsSection(
       title: context.loc.account_settings,
-      settings: null,
+      settings: const AccountSettings(),
     ),
     SettingsSection(
       title: context.loc.l10n_settings,
-      settings: LocSettings(),
+      settings: const LocSettings(),
     ),
     SettingsSection(
       title: context.loc.contact_support,
@@ -53,6 +50,8 @@ class _SettingsMenuState extends State<SettingsMenu> {
               child: Theme(
                 data: Theme.of(context).copyWith(cardColor: mainColor),
                 child: ExpansionPanelList(
+                  expandedHeaderPadding:
+                      const EdgeInsets.symmetric(vertical: 0),
                   children: sections.map((e) => e.toPanel()).toList(),
                   expansionCallback: (panelIndex, isExpanded) {
                     setState(() {
