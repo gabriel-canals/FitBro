@@ -72,6 +72,7 @@
   "l10n_settings" : "Localización",
   "profile_settings" : "Perfil",
   "contact_support" : "Contacto y soporte",
+  "account_settings" : "Cuenta",
 
     "@_TRAINING_VIEW_" : {},
   "training_history" : "Historial",

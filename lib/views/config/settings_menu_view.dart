@@ -1,3 +1,4 @@
+import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/bloc/auth_event.dart';
@@ -19,16 +20,12 @@ class _SettingsMenuState extends State<SettingsMenu> {
       settings: null,
     ),
     SettingsSection(
+      title: context.loc.account_settings,
+      settings: null,
+    ),
+    SettingsSection(
       title: context.loc.l10n_settings,
       settings: LocSettings(),
-    ),
-    SettingsSection(
-      title: context.loc.password_reset,
-      settings: null,
-    ),
-    SettingsSection(
-      title: context.loc.password_reset,
-      settings: null,
     ),
     SettingsSection(
       title: context.loc.contact_support,
@@ -48,18 +45,21 @@ class _SettingsMenuState extends State<SettingsMenu> {
           style: const TextStyle(fontSize: 24),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            SingleChildScrollView(
-              child: ExpansionPanelList(
-                children: sections.map((e) => e.toPanel()).toList(),
-                expansionCallback: (panelIndex, isExpanded) {
-                  setState(() {
-                    sections[panelIndex].isExpanded = !isExpanded;
-                  });
-                },
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Theme(
+                data: Theme.of(context).copyWith(cardColor: mainColor),
+                child: ExpansionPanelList(
+                  children: sections.map((e) => e.toPanel()).toList(),
+                  expansionCallback: (panelIndex, isExpanded) {
+                    setState(() {
+                      sections[panelIndex].isExpanded = !isExpanded;
+                    });
+                  },
+                ),
               ),
             ),
 
@@ -69,7 +69,22 @@ class _SettingsMenuState extends State<SettingsMenu> {
                   authBloc.add(const LogOutAuthEvent());
                   Navigator.pop(context);
                 },
-                child: Text(context.loc.logout))
+                style: ButtonStyle(
+                    minimumSize: MaterialStatePropertyAll(
+                      Size(MediaQuery.of(context).size.width / 1.4, 1),
+                    ),
+                    backgroundColor:
+                        const MaterialStatePropertyAll(Colors.redAccent),
+                    shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(3.0),
+                        side: BorderSide.none))),
+                child: Text(
+                  context.loc.logout,
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16),
+                ))
           ],
         ),
       ),

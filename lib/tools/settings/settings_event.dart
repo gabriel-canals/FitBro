@@ -16,7 +16,7 @@ class SettingsSection {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             title,
-            style: const TextStyle(fontSize: 30.0),
+            style: const TextStyle(fontSize: 30.0, color: Colors.white),
           ),
         );
       },
