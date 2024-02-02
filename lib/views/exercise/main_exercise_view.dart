@@ -4,63 +4,72 @@ import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ExerciseView extends StatelessWidget {
+class ExerciseView extends StatefulWidget {
   const ExerciseView({super.key});
 
   @override
+  State<ExerciseView> createState() => _ExerciseViewState();
+}
+
+class _ExerciseViewState extends State<ExerciseView> {
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 60),
-        Column(
-          children: [
-            Text(
-              context.loc.training,
-              textAlign: TextAlign.left,
-              style: TextStyle(
-                fontFamily: GoogleFonts.montserrat().fontFamily,
-                color: ternaryColor,
-                fontSize: 40,
-                letterSpacing: 0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainExerciseViewButton(
-                  label: context.loc.training_history,
-                  icon: Icons.schedule,
-                ),
-                const SizedBox(width: 25),
-                MainExerciseViewButton(
-                  label: context.loc.training_templates,
-                  icon: Icons.list_alt,
-                ),
-              ],
-            ),
-            const SizedBox(height: 25),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainExerciseViewButton(
-                  label: context.loc.exercises,
-                  icon: Icons.fitness_center_sharp,
-                ),
-                const SizedBox(width: 25),
-                MainExerciseViewButton(
-                  label: context.loc.training_goals,
-                  icon: Icons.flag_circle,
-                ),
-              ],
-            ),
-            const SizedBox(height: 60),
-            NewTrainingButton(label: context.loc.new_training),
-          ],
+    return Scaffold(
+        appBar: AppBar(
+          actions: const [],
         ),
-      ],
-    );
+        body: Column(
+          children: [
+            const SizedBox(height: 60),
+            Column(
+              children: [
+                Text(
+                  context.loc.training,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontFamily: GoogleFonts.montserrat().fontFamily,
+                    color: ternaryColor,
+                    fontSize: 40,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MainExerciseViewButton(
+                      label: context.loc.training_history,
+                      icon: Icons.schedule,
+                    ),
+                    const SizedBox(width: 25),
+                    MainExerciseViewButton(
+                      label: context.loc.training_templates,
+                      icon: Icons.list_alt,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 25),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MainExerciseViewButton(
+                      label: context.loc.exercises,
+                      icon: Icons.fitness_center_sharp,
+                    ),
+                    const SizedBox(width: 25),
+                    MainExerciseViewButton(
+                      label: context.loc.training_goals,
+                      icon: Icons.flag_circle,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 60),
+                NewTrainingButton(label: context.loc.new_training),
+              ],
+            ),
+          ],
+        ));
   }
 }
 
@@ -143,8 +152,9 @@ class NewTrainingButton extends StatelessWidget {
             const SizedBox(width: 10),
             FloatingActionButton.small(
               onPressed: () {
-                // Add your onPressed code here!
+                Navigator.of(context).pushNamed(historyRoute);
               },
+              heroTag: "new_training",
               backgroundColor: mainColor2,
               child: const Icon(
                 Icons.add,
