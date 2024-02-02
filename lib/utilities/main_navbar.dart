@@ -84,7 +84,7 @@ class _MainNavBarState extends State<MainNavBar> {
       ),
       body: <Widget>[
         /// Exercise view
-        const ExerciseView(),
+        const MenuExerciseView(),
 
         /// Overview view
         const OverviewView(),

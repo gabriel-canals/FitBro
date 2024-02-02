@@ -4,14 +4,14 @@ import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ExerciseView extends StatefulWidget {
-  const ExerciseView({super.key});
+class MenuExerciseView extends StatefulWidget {
+  const MenuExerciseView({super.key});
 
   @override
-  State<ExerciseView> createState() => _ExerciseViewState();
+  State<MenuExerciseView> createState() => _MenuExerciseViewState();
 }
 
-class _ExerciseViewState extends State<ExerciseView> {
+class _MenuExerciseViewState extends State<MenuExerciseView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,11 +41,13 @@ class _ExerciseViewState extends State<ExerciseView> {
                     MainExerciseViewButton(
                       label: context.loc.training_history,
                       icon: Icons.schedule,
+                      route: historyRoute,
                     ),
                     const SizedBox(width: 25),
                     MainExerciseViewButton(
                       label: context.loc.training_templates,
                       icon: Icons.list_alt,
+                      route: templatesRoute,
                     ),
                   ],
                 ),
@@ -56,11 +58,13 @@ class _ExerciseViewState extends State<ExerciseView> {
                     MainExerciseViewButton(
                       label: context.loc.exercises,
                       icon: Icons.fitness_center_sharp,
+                      route: exercisesRoute,
                     ),
                     const SizedBox(width: 25),
                     MainExerciseViewButton(
                       label: context.loc.training_goals,
                       icon: Icons.flag_circle,
+                      route: goalsRoute,
                     ),
                   ],
                 ),
@@ -74,11 +78,16 @@ class _ExerciseViewState extends State<ExerciseView> {
 }
 
 class MainExerciseViewButton extends StatelessWidget {
-  const MainExerciseViewButton(
-      {super.key, required this.label, required this.icon});
+  const MainExerciseViewButton({
+    super.key,
+    required this.label,
+    required this.icon,
+    required this.route,
+  });
 
   final String label;
   final IconData icon;
+  final String route;
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +96,7 @@ class MainExerciseViewButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 3,
       child: TextButton(
         onPressed: () {
-          Navigator.of(context).pushNamed(historyRoute);
+          Navigator.of(context).pushNamed(route);
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(mainColor2),

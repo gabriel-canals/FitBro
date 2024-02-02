@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitbro/constants/routes.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
-import 'package:fitbro/services/auth/bloc/auth_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -43,17 +42,7 @@ class _OverviewViewState extends State<OverviewView> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-          ),
-          SizedBox(
-            child: TextButton(
-              onPressed: () {
-                context.read<AuthBloc>().add(
-                      const LogOutAuthEvent(),
-                    );
-              },
-              child: const Text("data"),
-            ),
-          ),
+          )
         ],
       ),
     );

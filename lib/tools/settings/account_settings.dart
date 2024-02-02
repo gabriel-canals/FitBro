@@ -25,6 +25,7 @@ class _AccountSettingsState extends State<AccountSettings> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final AuthBloc authBloc =
         ModalRoute.of(context)!.settings.arguments as AuthBloc;
 

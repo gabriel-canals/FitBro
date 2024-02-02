@@ -4,6 +4,7 @@ import 'package:fitbro/homepage.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/firebase_auth_provider.dart';
 import 'package:fitbro/tools/settings/settings.dart';
+import 'package:fitbro/views/exercise/exercises_view.dart';
 import 'package:fitbro/views/exercise/goals_view.dart';
 import 'package:fitbro/views/exercise/history_view.dart';
 import 'package:fitbro/views/exercise/templates_view.dart';
@@ -80,7 +81,7 @@ class MyMaterialApp extends StatelessWidget {
         historyRoute: (context) => const HistoryView(),
         templatesRoute: (context) => const TemplatesView(),
         goalsRoute: (context) => const GoalsView(),
-        exercisesRoute: (context) => const ExerciseView()
+        exercisesRoute: (context) => const ExercisesView()
       },
     );
   }
