@@ -7,8 +7,10 @@ class Exercise {
   late int id;
 
   Exercise(this.name, this.category, this.bodyPart, this.id) {
-    if (categories.contains(category) == false) throw Exception("Ups");
-    if (partOfBody.contains(bodyPart) == false) throw Exception("Ups");
+    if (categories.contains(category) == false){ 
+      print(category);
+      throw Exception(category);}
+    if (partOfBody.contains(bodyPart) == false) throw Exception(bodyPart);
   }
 
   String get getName => name;
