@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:fitbro/services/auth/bloc/auth_bloc.dart';
 import 'package:fitbro/services/auth/firebase_auth_provider.dart';
-import 'package:fitbro/views/initial_view.dart';
+import 'package:fitbro/utilities/main_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -64,7 +64,7 @@ class _AccountSettingsState extends State<AccountSettings> {
         TextButton(
             onPressed: () {
               FirebaseAuthProvider().changeUsername(username: _username.text);
-              InitialView();
+              NavigationBarApp(context: context);
             },
             style: ButtonStyle(
                 minimumSize: MaterialStatePropertyAll(
