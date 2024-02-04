@@ -48,3 +48,44 @@ TextFormField usernameTextField(
     ],
   );
 }
+
+class ExerciseNameTextField extends StatelessWidget {
+  const ExerciseNameTextField(
+      {super.key,
+      required TextEditingController titleController,
+      required this.custom})
+      : _titleController = titleController;
+
+  final TextEditingController _titleController;
+  final bool custom;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      enabled: custom,
+      controller: _titleController,
+      keyboardType: TextInputType.multiline,
+      maxLines: null,
+      cursorColor: Colors.grey,
+      style: const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontSize: 20,
+      ),
+      decoration: InputDecoration(
+        helperText: "Default",
+        helperStyle: TextStyle(fontSize: custom ? 0 : 12, color: Colors.white),
+        labelText: "Exercise name",
+        labelStyle: const TextStyle(color: Colors.white),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(width: 1, color: Colors.grey),
+          borderRadius: BorderRadius.circular(5),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(width: 1, color: Colors.grey),
+          borderRadius: BorderRadius.circular(5),
+        ),
+      ),
+    );
+  }
+}

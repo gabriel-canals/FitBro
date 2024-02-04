@@ -262,4 +262,5 @@ final defaultExercises = [
   Exercise("Wrist Roller", "Machine/Other", "Arms", 256),
   Exercise("Yoga", "Duration", "Cardio", 257),
   Exercise("Zercher Squat (Barbell)", "Barbell", "Legs", 258),
+  Exercise("Aa Prueba", "Barbell", "Legs", 258),
 ];

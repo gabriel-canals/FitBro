@@ -1,13 +1,21 @@
 import 'package:fitbro/constants/colors.dart';
 import 'package:fitbro/extensions/buildcontext/loc.dart';
 import 'package:fitbro/utilities/exercises/exercises.dart';
+import 'package:fitbro/views/exercise/create_update_exercise_view.dart';
 import 'package:flutter/material.dart';
 
-class ExercisesView extends StatelessWidget {
+class ExercisesView extends StatefulWidget {
   const ExercisesView({super.key});
 
   @override
+  State<ExercisesView> createState() => _ExercisesViewState();
+}
+
+class _ExercisesViewState extends State<ExercisesView> {
+  @override
   Widget build(BuildContext context) {
+    var exerciseList = exercises;
+    exerciseList.sort((a, b) => a.name.compareTo(b.name));
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -27,7 +35,7 @@ class ExercisesView extends StatelessWidget {
           ),
           SliverList(
               delegate: SliverChildBuilderDelegate((context, index) {
-            final exercise = exercises.elementAt(index);
+            final exercise = exerciseList.elementAt(index);
             return Container(
               height: 75,
               margin: const EdgeInsets.only(bottom: 10),
@@ -59,7 +67,17 @@ class ExercisesView extends StatelessWidget {
                     fontSize: 13,
                   ),
                 ),
-                onTap: () {},
+                onTap: () async {
+                  await Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          CreateUpdateExerciseView(givenExercise: exercise)));
+                  setState(
+                    () {
+                      exerciseList = exercises;
+                      exerciseList.sort((a, b) => a.name.compareTo(b.name));
+                    },
+                  );
+                },
               ),
             );
           }, childCount: exercises.length))
