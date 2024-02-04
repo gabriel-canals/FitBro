@@ -81,5 +81,10 @@
   "training_templates" : "Plantillas",
   "training_goals" : "Objetivos",
   "exercises" : "Ejercicios",
-  "new_training" : "Nuevo Entrenamiento"
+  "new_training" : "Nuevo Entrenamiento",
+
+  "@_CREATE_UPDATE_EXERCISE_VIEW_" : {},
+  "locked_default_exercises" : "No es posible cambiar el nombre de los ejercicios por defecto.",
+  "exercise_name" : "Nombre del ejercicio",
+  "exercise" : "Ejercicio"
 }

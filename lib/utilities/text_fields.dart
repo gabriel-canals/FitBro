@@ -62,6 +62,7 @@ class ExerciseNameTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      textCapitalization: TextCapitalization.sentences,
       enabled: custom,
       controller: _titleController,
       keyboardType: TextInputType.multiline,
@@ -73,9 +74,10 @@ class ExerciseNameTextField extends StatelessWidget {
         fontSize: 20,
       ),
       decoration: InputDecoration(
-        helperText: "Default",
+        helperMaxLines: 12,
+        helperText: context.loc.locked_default_exercises,
         helperStyle: TextStyle(fontSize: custom ? 0 : 12, color: Colors.white),
-        labelText: "Exercise name",
+        labelText: context.loc.exercise_name,
         labelStyle: const TextStyle(color: Colors.white),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(width: 1, color: Colors.grey),

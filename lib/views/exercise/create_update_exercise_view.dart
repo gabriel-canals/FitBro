@@ -43,7 +43,7 @@ class _CreateUpdateExerciseViewState extends State<CreateUpdateExerciseView> {
             overflow: TextOverflow.ellipsis,
           ),
           decoration: InputDecoration(
-            hintText: context.loc.exercises, // TODO: LOC
+            hintText: context.loc.exercise,
             border: InputBorder.none,
             hintStyle: const TextStyle(
               fontWeight: FontWeight.bold,
@@ -65,8 +65,9 @@ class _CreateUpdateExerciseViewState extends State<CreateUpdateExerciseView> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (widget.givenExercise == null) {
-            Exercise(_titleController.text, "Cardio", "Cardio",
-                500 + exercises.length - defaultExercises.length);
+            var newExercise = Exercise(_titleController.text, "Cardio",
+                "Cardio", 500 + exercises.length - defaultExercises.length);
+            exercises.add(newExercise);
           } else {
             widget.givenExercise!.name = _titleController.text;
           }

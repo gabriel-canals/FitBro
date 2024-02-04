@@ -78,12 +78,16 @@
   "language_changed" : "Language changed",
   "restart_app" : "Restart FitBro to apply changes.",
 
-
     "@_TRAINING_VIEW_" : {},
   "training_history" : "History",
   "training_templates" : "Templates",
   "training_goals" : "Goals",
   "exercises" : "Exercises",
-  "new_training" : "New Training"
+  "new_training" : "New Training",
+
+    "@_CREATE_UPDATE_EXERCISE_VIEW_" : {},
+  "locked_default_exercises" : "Name can't be edited for default exercises.",
+  "exercise_name" : "Exercise name",
+  "exercise" : "Exercise"
 
 }

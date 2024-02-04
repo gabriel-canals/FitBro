@@ -80,5 +80,10 @@
   "training_templates" : "Modello",
   "training_goals" : "Obiettivi",
   "exercises" : "Esercizi",
-  "new_training" : "Nuovo Alenamento"
+  "new_training" : "Nuovo Alenamento",
+
+  "@_CREATE_UPDATE_EXERCISE_VIEW_" : {},
+  "locked_default_exercises" : "Non è possibile cambiare il nome degli esercizi predefiniti.",
+  "exercise_name" : "Nome dell'esercizio",
+  "exercise" : "Esercizio"
 }
